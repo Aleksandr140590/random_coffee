@@ -4,8 +4,8 @@ name: Random_cofee_bot
 on:
   push:
     branches: [ test ]
-  pull_request:
-    branches: [ test ]
+  # pull_request:
+    # branches: [ test ]
 
 jobs:
   build_and_push_to_docker_hub:
