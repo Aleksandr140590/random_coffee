@@ -46,8 +46,8 @@ jobs:
             sudo docker pull dodge0000/random_coffee_bot:latest
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d /
-            -e TG_TOKEN=${{ secrets.TG_TOKEN }} /
-            -e ADMIN_TG_ID=${{ secrets.ADMIN_TG_ID }} /
-            -e DEFAULT_PARE_iD=${{ secrets.DEFAULT_PARE_iD }} /
+            sudo docker run --rm -d \
+            -e TG_TOKEN=${{ secrets.TG_TOKEN }} \
+            -e ADMIN_TG_ID=${{ secrets.ADMIN_TG_ID }} \
+            -e DEFAULT_PARE_iD=${{ secrets.DEFAULT_PARE_iD }} \
             dodge0000/random_coffee_bot:latest
