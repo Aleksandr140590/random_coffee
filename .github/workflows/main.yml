@@ -47,7 +47,6 @@ jobs:
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker run --rm \
-            -e TG_TOKEN=${{ secrets.TG_TOKEN }} \
-            -e ADMIN_TG_ID=${{ secrets.ADMIN_TG_ID }} \
-            -e DEFAULT_PARE_iD=${{ secrets.DEFAULT_PARE_iD }} \
+            --env-file /home/alex/.env \
             -d dodge0000/random_coffee_bot:latest
+
