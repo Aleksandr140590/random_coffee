@@ -46,6 +46,7 @@ jobs:
             sudo docker pull dodge0000/random_coffee_bot:latest
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d dodge0000/random_coffee_bot:latest
-            
+            sudo docker run \
+            --env-file /home/alex/.env \
+            --rm -d dodge0000/random_coffee_bot:latest
 
