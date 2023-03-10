@@ -48,6 +48,6 @@ jobs:
 #            sudo docker stop $(sudo docker ps -a -q)
 #            sudo docker run \
 #            --env-file /home/alex/.env \
-#            -v /home/alex/db:/db \
-#            --rm -d dodge0000/random_coffee_bot:latest
+#            -v /home/alex/db/:/db/ \
+#            --rm -d dodge0000/random_coffee_bot:v.1.0
 
